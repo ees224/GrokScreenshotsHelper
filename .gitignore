@@ -1,0 +1,17 @@
+# Xcode
+SkeenShot/build/
+SkeenShot/DerivedData/
+*.xcuserstate
+*.xcuserdatad/
+xcuserdata/
+
+# macOS
+.DS_Store
+*.swp
+
+# Local / runtime (not source)
+*.ipa
+*.dSYM.zip
+
+# User screenshots (runtime data, not repo)
+# Note: ~/GrokScreenshots lives outside this repo
