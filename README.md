@@ -1,6 +1,8 @@
 # SkeenShot
 
-Low-friction screenshot sharing for **Grok Build TUI** on macOS. Capture natively, tag with session context, save locally, and analyze with vision — no cloud upload.
+Low-friction screenshot sharing for **Grok Build TUI** on macOS.
+
+**Repository:** https://github.com/ees224/GrokScreenshotsHelper Capture natively, tag with session context, save locally, and analyze with vision — no cloud upload.
 
 ## Features
 
