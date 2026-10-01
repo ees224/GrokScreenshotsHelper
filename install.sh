@@ -72,11 +72,10 @@ if [[ "$INSTALL_HOOKS" == "1" ]]; then
   mkdir -p "$HOME/.grok/hooks"
   HOOK_SRC="$ROOT/hooks/skeenshot-context.json"
   HOOK_DEST="$HOME/.grok/hooks/skeenshot-context.json"
-  sed "s|/Users/edmundskeen|$HOME|g" "$HOOK_SRC" > "$HOOK_DEST"
+  cp "$HOOK_SRC" "$HOOK_DEST"
   echo "Installed hook $HOOK_DEST"
 fi
 
-chmod +x "$ROOT/skill/skeenshot/scripts/"*.sh
 chmod +x "$ROOT/SkeenShot/scripts/"*.sh 2>/dev/null || true
 
 echo ""

@@ -1,10 +1,8 @@
 # SkeenShot configuration
 # Copy to ~/GrokScreenshots/config.toml and customize.
 
-screenshots_dir = "~/GrokScreenshots"
 analyze_mode = "queue"          # queue | headless | both
 max_dimension = 4096
 session_fallback = "active_sessions"
-archive_after_days = 30
 notify_on_save = true
 copy_path_to_clipboard = true
