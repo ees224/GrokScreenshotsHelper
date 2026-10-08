@@ -92,9 +92,9 @@ When the watcher prints `NEW:/path/to/file.png` or the user returns after a noti
 
 | Issue | Fix |
 |-------|-----|
-| Share option missing | Extension needs Xcode Automatic Signing (embedded.provisionprofile). Run `SkeenShot/scripts/xcode_sign_and_install.sh`, build in Xcode, re-run `install.sh`. **Workaround:** Shortcuts Share action — see `shortcuts/README.md` |
+| Share option missing | Extension needs Xcode Automatic Signing (embedded.provisionprofile). Run `./install.sh`, or `SkeenShot/scripts/sign_app.sh` and `SkeenShot/scripts/register_extension.sh`. **Workaround:** Shortcuts Share action — see `shortcuts/README.md` |
 | Wrong session tag | Run `/skeenshot` or ensure SessionStart hook is installed |
 | Watcher not detecting | `~/.grok/skills/skeenshot/scripts/watcher.sh --once` |
 | Stop watcher | `~/.grok/skills/skeenshot/scripts/watcher.sh --stop` |
 
-See `references/SETUP.md` for full installation.
+See `~/GrokScreenshotsHelper/README.md` for full installation.

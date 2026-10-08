@@ -2,7 +2,9 @@
 
 Low-friction screenshot sharing for **Grok Build TUI** on macOS.
 
-**Repository:** https://github.com/ees224/GrokScreenshotsHelper Capture natively, tag with session context, save locally, and analyze with vision — no cloud upload.
+**Repository:** https://github.com/ees224/GrokScreenshotsHelper
+
+Capture natively, tag with session context, save locally, and analyze with vision — no cloud upload.
 
 ## Features
 
@@ -48,16 +50,7 @@ GrokScreenshotsHelper/
 
 ## Configuration
 
-Edit `~/GrokScreenshots/config.toml`:
-
-```toml
-screenshots_dir = "~/GrokScreenshots"
-analyze_mode = "queue"      # queue | headless | both
-max_dimension = 4096
-notify_on_save = true
-copy_path_to_clipboard = true
-archive_after_days = 30
-```
+Edit `~/GrokScreenshots/config.toml`. Start from [`config/skeenshot.toml.example`](config/skeenshot.toml.example).
 
 ## File naming
 
@@ -98,35 +91,9 @@ Open in Xcode: `open SkeenShot.xcodeproj`
 - **Share Extension** — enable in System Settings → Privacy & Security → Extensions → Sharing
 - No Accessibility or Full Disk Access required
 
-## Test plan
-
-```bash
-# Install
-./install.sh
-
-# Context
-~/.grok/skills/skeenshot/scripts/write_context.sh
-cat ~/GrokScreenshots/.context.json
-
-# Simulate screenshot
-cp /System/Library/Desktop Pictures/.wallpapers/Sequoia Sunrise/Sequoia Sunrise.madesktop/stills/0d.jpg /tmp/test.jpg 2>/dev/null || \
-  python3 -c "from PIL import Image" 2>/dev/null || \
-  sips -s format png /System/Library/CoreServices/DefaultDesktop.heic --out /tmp/test.png 2>/dev/null
-# Or use any PNG:
-cp "$(find ~/Pictures -name '*.png' 2>/dev/null | head -1)" ~/GrokScreenshots/skeenshot_test_$(date +%Y%m%d_%H%M%S).png
-
-# Watcher
-~/.grok/skills/skeenshot/scripts/watcher.sh --once
-cat ~/GrokScreenshots/inbox.jsonl
-
-# Grok TUI
-# /skeenshot
-# /skeenshot analyze <filename>
-```
-
 ## Integrations
 
-See [shortcuts/README.md](shortcuts/README.md) for Raycast, Shortcuts, Obsidian, OmniFocus, and Paperless-ngx tips.
+See [shortcuts/README.md](shortcuts/README.md) for Share sheet, Raycast, Obsidian, and OmniFocus tips.
 
 ## Troubleshooting
 

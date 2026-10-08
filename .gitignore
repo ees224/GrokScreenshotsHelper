@@ -10,8 +10,4 @@ xcuserdata/
 *.swp
 
 # Local / runtime (not source)
-*.ipa
 *.dSYM.zip
-
-# User screenshots (runtime data, not repo)
-# Note: ~/GrokScreenshots lives outside this repo

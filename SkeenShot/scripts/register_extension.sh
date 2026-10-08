@@ -27,7 +27,7 @@ if pluginkit -m -i "$BUNDLE_ID" -v 2>&1 | grep -q "$BUNDLE_ID"; then
 else
   echo "NOTE: Share Extension not registered with pluginkit."
   echo "      Cause: missing embedded.provisionprofile (needs Xcode Automatic Signing)."
-  echo "      Fix: run ~/GrokScreenshotsHelper/SkeenShot/scripts/xcode_sign_and_install.sh"
+  echo "      Fix: run ~/GrokScreenshotsHelper/install.sh"
   echo "      Workaround: Shortcuts Share action — see ~/GrokScreenshotsHelper/shortcuts/README.md"
 fi
 

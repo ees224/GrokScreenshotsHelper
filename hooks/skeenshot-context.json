@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/edmundskeen/.grok/skills/skeenshot/scripts/write_context.sh"
+            "command": "../skills/skeenshot/scripts/write_context.sh"
           }
         ]
       }

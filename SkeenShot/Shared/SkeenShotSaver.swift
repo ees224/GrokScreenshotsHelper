@@ -73,12 +73,6 @@ enum SkeenShotSaver {
         return SaveResult(imagePath: imagePath, sidecarPath: sidecarPath)
     }
 
-    static func saveFromPasteboard(source: String, note: String? = nil) -> SaveResult? {
-        let pasteboard = NSPasteboard.general
-        guard let image = imageFromPasteboard(pasteboard) else { return nil }
-        return save(image: image, source: source, note: note)
-    }
-
     static func imageFromPasteboard(_ pasteboard: NSPasteboard) -> NSImage? {
         if let images = pasteboard.readObjects(forClasses: [NSImage.self], options: nil) as? [NSImage],
            let first = images.first {
